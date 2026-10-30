@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: clamp(12px, 1rem + 0.5vw, 14px);   /* Berechnet die Schriftgröße dynamisch */
+}
+
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+.wrap {
+    max-width: 450px;
+    margin: 20px auto;
+    border: 0px solid gainsboro;
+}
+
+.beispiel {
+
+    * { margin: 0; }
+    
+    > * {
+        border: 0px solid red;
+        padding: .5rem;
+        margin: .5rem;
+    }
+
+    img {
+        max-width: 80%; /* 20% kleiner als der p-Tag */
+        height: auto;
+        display: block;
+        margin: 10px auto; /* Zentriert das Bild horizontal */
+        border: 1px solid #888;
+        border-radius: .5em;
+    }
+
+    .thema {
+        display: flex; /* Aktiviert Flexbox, damit justify-content wirkt */
+        justify-content: space-between;
+        border-bottom: 1px solid #666;
+        font-weight: 600;
+        font-size: larger;
+    }
+
+    .thema::after {
+        content: "[X]";
+    }
+
+    .aufgabe {
+        background-color: rgba(0,0,255,0.1);
+        border-left: 3px solid blue;
+    }
+
+    .aufgabe::before {
+        content: "Beispiel:";
+        color: darkblue;
+        font-weight: bold;
+    }
+
+    .schritte, .navigation {
+        border: 1px solid gainsboro;
+    }
+
+    .key {
+        border: 1px solid #666;
+        padding: 2px;
+        background: #f9f9f9;
+        font-style: italic;
+        letter-spacing: .1em;
+    }
+
+    .cas { font: normal 1.3em "TI Nspire Keys CX"; }
+
+    .lsg {
+        border: 1px solid green;
+        padding: 2px;
+        background: lightgreen;
+    }
+
+    .navigation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        button:disabled {
+            opacity: .4;
+            cursor: default;
+        }
+
+        .punkte { display: flex; gap: .5rem; }
+
+        .punkt {
+            width: 2rem;
+            height: 2rem;
+            padding: 0;
+            border: none;
+            border-radius: 50%;
+            background: #ccc;
+        }
+
+        .punkt.aktiv { background: #333; }
+    }
+}
