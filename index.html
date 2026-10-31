@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/fonts.css">
     <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
+<body class="lato-regular">
 
     <main class="wrap">
 
@@ -27,6 +27,33 @@
                     <p>Tippe die Gleichung mit <span class="key abc">=0</span> ein und dahinter <br>Komma und Variable <span class="key abc">x</span>.</p>
                     <p><img src="images/nullstellen-2.jpg" alt=""></p>
                     <p>Lösung: <span class="tex lsg">x_1 = 2,\ x_2 = 4</span></p>
+                </div>
+            </div>
+            <div class="navigation"></div>
+        </section>
+
+        <section class="beispiel" id="nullstellen-bestimmen">
+            <div class="thema">Funktion definieren, <br>Funktionswert bestimmen</div>
+            <div class="aufgabe">
+                Gegeben ist die Funktion <span class="tex">f</span> mit <span class="tex">f(x) = x^3 - 3x</span>.
+                <ol>
+                    <li>Berechne den Funktionswert an der Stelle <span class="tex">x=-3</span>.</li>
+                    <li>Bestimme die Nullstellen von <span class="tex">f</span>.</li>
+                </ol>
+            </div>
+            <div class="schritte">
+                <div class="schritt">
+                    <p>Definiere die Funktion mit dem CAS.</p>
+                    <p>Tippe <span class="key abc">f(x):=</span> und dann die Gleichung ein.</p>
+                    <p>Hinweise: <span class="key abc">:=</span> erhält man durch <span class="key cas">/t</span></p>
+                    <p><img src="images/funktion-definieren.jpg" alt=""></p>
+                </div>
+                <div class="schritt">
+                    <p>Bestimme den Funktionswert mit der Eingabe <span class="key abc">f(-3)</span>.</p>
+                    <p>Bestimme die Nullstellen durch <span class="key abc">solve(f(x)=0, x)</span>.
+                    <p><img src="images/funktion-funktionswert.jpg" alt=""></p>
+                    <p>Lösung: Der Funktionswert an der Stelle <span class="tex">x = -3</span> beträgt <span class="tex lsg">-18</span></p>
+                    <p>Die Nullstellen sind <span class="tex lsg">x_1 = -\sqrt{3} \vee x_2 = 0 \vee x_3 = \sqrt{3}</span>.</p>
                 </div>
             </div>
             <div class="navigation"></div>

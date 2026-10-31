@@ -1,15 +1,7 @@
-* {
-    box-sizing: border-box;
-}
-
-html {
-    font-size: clamp(12px, 1rem + 0.5vw, 14px);   /* Berechnet die Schriftgröße dynamisch */
-}
-
-body {
-    margin: 0;
-    font-family: "Open Sans", sans-serif;
-}
+* { box-sizing: border-box; }
+html { font-size: clamp(12px, 1rem + 0.5vw, 14px);   /* Berechnet die Schriftgröße dynamisch */ }
+body { margin: 0; }
+math { font-family: "Latin Modern Math", math; }
 
 .wrap {
     max-width: 450px;
@@ -64,13 +56,27 @@ body {
         border: 1px solid gainsboro;
     }
 
+    ol {
+        list-style: none;
+        list-style-position: inside;
+        counter-reset: item;
+        padding: 0;
+    }
+    ol li {
+        counter-increment: item;
+    }
+    ol li::before {
+        content: counter(item, lower-alpha) ") ";
+        margin-right: .3rem;
+    }
+
     .key {
-        border: 1px solid #666;
+        border: 1px solid #999;
         border-radius: .1em;
-        padding: .1em .3em;
+        padding: .1em;
         background: #f9f9f9;
         font-style: italic;
-        letter-spacing: .1em;
+        letter-spacing: .2em;
     }
 
     .cas { font: normal 1.3em "TI Nspire Keys CX"; }
