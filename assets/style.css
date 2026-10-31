@@ -19,7 +19,7 @@ body {
 
 .beispiel {
 
-    * { margin: 0; }
+    * { margin: 0; line-height: 2; }
     
     > * {
         border: 0px solid red;
@@ -42,6 +42,7 @@ body {
         border-bottom: 1px solid #666;
         font-weight: 600;
         font-size: larger;
+        line-height: normal;
     }
 
     .thema::after {
@@ -65,7 +66,8 @@ body {
 
     .key {
         border: 1px solid #666;
-        padding: 2px;
+        border-radius: .1em;
+        padding: .1em .3em;
         background: #f9f9f9;
         font-style: italic;
         letter-spacing: .1em;
@@ -75,8 +77,9 @@ body {
 
     .lsg {
         border: 1px solid green;
-        padding: 2px;
         background: lightgreen;
+        border-radius: .1em;
+        padding: .2em;
     }
 
     .navigation {
