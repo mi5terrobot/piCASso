@@ -3,11 +3,42 @@ html { font-size: clamp(12px, 1rem + 0.5vw, 14px);   /* Berechnet die Schriftgr√
 body { margin: 0; }
 math { font-family: "Latin Modern Math", math; }
 
+img {
+    max-width: 90%; /* 20% kleiner als der p-Tag */
+    height: auto;
+    display: block;
+    margin: 10px auto; /* Zentriert das Bild horizontal */
+    border-radius: .5em;
+}
+
 .wrap {
     max-width: 450px;
     margin: 20px auto;
     border: 0px solid gainsboro;
 }
+
+[hidden] { display: none !important; }
+
+#inhalt { padding: .5rem; margin: .5rem; }
+
+#inhalt h1 {
+    margin: 0 0 .5rem;
+    padding: .5rem;
+    border-bottom: 1px solid #666;
+    font-size: larger;
+}
+
+#toc { list-style: none; margin: 0; padding: 0; }
+
+#toc a {
+    display: block;
+    padding: .75rem .5rem;
+    border-bottom: 1px solid gainsboro;
+    color: inherit;
+    text-decoration: none;
+}
+
+#toc a:hover { background: rgba(0,0,255,0.05); }
 
 .beispiel {
 
@@ -21,11 +52,8 @@ math { font-family: "Latin Modern Math", math; }
 
     img {
         max-width: 80%; /* 20% kleiner als der p-Tag */
-        height: auto;
-        display: block;
-        margin: 10px auto; /* Zentriert das Bild horizontal */
         border: 1px solid #888;
-        border-radius: .5em;
+        margin: 10px auto; /* Zentriert das Bild horizontal */
     }
 
     .thema {
@@ -34,11 +62,13 @@ math { font-family: "Latin Modern Math", math; }
         border-bottom: 1px solid #666;
         font-weight: 600;
         font-size: larger;
-        line-height: normal;
+        line-height: 1em !important;
     }
-
-    .thema::after {
-        content: "[X]";
+    
+    .schliessen {
+        color: inherit;
+        text-decoration: none;
+        padding-left: 1rem;
     }
 
     .aufgabe {
